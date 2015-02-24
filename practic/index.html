@@ -7,6 +7,10 @@
         body {
             font-family: Arial, sans-serif;
         }
+        a {
+            text-decoration: none;
+        }
+
         .back {
             background-color: #cc3b07;
             width: 100%;
@@ -59,7 +63,7 @@
             color: #046cc1;
         }
 
-        /* Колонки второго блока */
+        /* Колонки блока module1 */
         .column {
             float: left;
             padding: 40px 15px 40px 0;
@@ -97,6 +101,43 @@
             background-color: #fff;
             color: #046cc1;
         }
+
+        /* Колонки третьего блока module2 */
+        .column_block3_1 {
+            width: 370px;
+            float: left;
+        }
+        .column_block3_2 {
+            width: 770px;
+            float: left;
+        }
+        .services_list {
+            text-transform: uppercase;
+            margin-right: 19px;
+            list-style-type: disc;
+            padding: 0;
+        }
+        .services_list li {
+            line-height: 19px;
+            display: list-item;
+            height: 51px;
+            list-style-type: none;
+            margin-bottom: 3px;
+            width: 351px;
+            background-color: #000;
+        }
+        .services_list a {
+            color: #fff;
+            font-size: 18px;
+            display: block;
+            padding: 14px 20px 18px;
+            position: relative;
+        }
+
+        .services_list a:hover {
+            background-color: #046cc1;
+        }
+
     </style>
     <script>
 
@@ -148,7 +189,26 @@
         </div>
     </div>
     <div class="module2">
-        <div class="content">module2</div>
+        <div class="content">
+            <div class="column_block3_1">
+                <ul class="services_list">
+                    <li><a href="./about">Same Day In-Home Support</a></li>
+                    <li><a href="./portfolio">Certified Technicians</a></li>
+                    <li><a href="./news">Virus &amp; Spyware Removal</a></li>
+                    <li><a href="./about">Wireless Networking</a></li>
+                    <li><a href="./portfolio">On-site Engineers</a></li>
+                    <li><a href="./news">AD, MS Exchange, SQL</a></li>
+                    <li><a href="./about">Microsoft Certified</a></li>
+                    <li><a href="./portfolio">Maintenance Contracts</a></li>
+                    <li><a href="./news">Nationwide IT Workforce</a></li>
+                    <li><a href="./about">OEM Hardware Installations</a></li>
+                </ul>
+            </div>
+            <div class="column_block3_2">
+
+            </div>
+            <div class="clear"></div>
+        </div>
     </div>
     <div class="module3">
         <div class="content">module3</div>
