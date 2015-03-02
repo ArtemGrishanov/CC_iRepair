@@ -15,7 +15,10 @@
             text-transform: uppercase;
             margin-bottom: 0;
         }
-
+        h3 {
+            text-transform: uppercase;
+            font-size: 19px;
+        }
         .back {
             background-color: #cc3b07;
             width: 100%;
@@ -45,10 +48,6 @@
         .module3 {
             background-color: #046cc1;
             padding: 20px 0 50px 0;
-        }
-        .footer {
-            height: 370px;
-            background-color: #000;
         }
         .nav_container {
             display: inline-block;
@@ -179,6 +178,28 @@
         .user_avatar {
             border-radius: 200px;
             width: 120px;
+        }
+
+        /* footer */
+        .footer {
+            padding: 20px 0 20px;
+            background-color: #000;
+        }
+        .footer_col {
+            width: 220px;
+            float: left;
+        }
+
+        .footer_list {
+            margin-right: 19px;
+            padding: 0;
+        }
+
+        .footer_list li {
+            list-style-type: none;
+            font-size: 14px;
+            color: #046cc1;
+            padding-bottom: 20px;
         }
 
     </style>
@@ -323,7 +344,44 @@
         </div>
     </div>
     <div class="footer">
-        <div class="content">footer</div>
+        <div class="content">
+            <div class="footer_col">
+                <h3 class="white">navigation</h3>
+                <ul class="footer_list">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>News</li>
+                    <li>Contacts</li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h3 class="white">META</h3>
+                <ul class="footer_list">
+                    <li>Log in</li>
+                    <li>RSS</li>
+                    <li>Wordpress.org</li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h3 class="white">BLOGROLL</h3>
+                <ul class="footer_list">
+                    <li>Documentation</li>
+                    <li>Plugins</li>
+                    <li>Suggested ideas</li>
+                    <li>Themes</li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h3 class="white">Categories</h3>
+                <ul class="footer_list">
+                    <li>Online Support</li>
+                    <li>Spyware Removal</li>
+                    <li>Certified Technicians</li>
+                    <li>Wireless Networking</li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
     </div>
 </body>
 </html>
