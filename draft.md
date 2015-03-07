@@ -6,70 +6,7 @@ taskA
 tags: css, html
 tech: [html]html, [html]body, [html]script, [html]style, [html]div, [html]head, [html]meta, [css]font-family, [css]background-color, [css]width, [css]margin
 taskN.png
-Создать новый проект и сделать в нем каркас приложения.
-
-Постановка задачи
-
-Туториал
-
-Подсказка1 - это как контент
-<html>
-<head>
-    <title></title>
-    <meta charset="utf-8"/>
-    <style>
-    </style>
-</head>
-<body>
-</body>
-</html>
-
-Подсказка2
-<div>header</div>
-<div>slider</div>
-<div>module</div>
-<div>module</div>
-<div>module</div>
-<div>footer</div>
-
-Подсказка3
-body {
-    font-family: Arial, sans-serif;
-}
-.back {
-    background-color: #cc3b07;
-    width: 100%;
-}
-.content {
-    margin: 0 auto;
-    width: 1000px;
-    background-color: #c5c5c5;
-}
-.header {
-    /*height: 110px;*/
-}
-.slider {
-    /*height: 400px;*/
-}
-.module1 {
-    /*height: 400px;*/
-}
-.module2 {
-    /*height: 600px;*/
-}
-.module3 {
-    /*height: 350px;*/
-}
-.footer {
-    /*height: 370px;*/
-}
-...
-<div class="header">header</div>
-<div class="slider">slider</div>
-<div class="module1">module</div>
-<div class="module2">module</div>
-<div class="module3">module</div>
-<div class="footer">footer</div>
+Создать новый проект и сделать каркас приложения.
 
 
 taskB
