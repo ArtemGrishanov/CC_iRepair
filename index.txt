@@ -1,0 +1,199 @@
+2
+Макет страницы
+
+3
+Code Editor
+Sublime Text
+Chrome
+meta[html]
+encoding[browser]
+utf-8
+Windows-1251
+
+4
+html[html]
+css
+head[html]
+title[html]
+style[html]
+body[html]
+div[html]
+tag selector[css]
+class selector[css]
+classes[css]
+
+5
+margin[css]
+border[css]
+height[css]
+class[css]
+Горизонтальное выравнивание[css]
+width[css]
+height[css]
+
+6
+Средство определения цвета
+Кодирование цветов
+background-color[css]
+
+7
+box-model[css]
+display[css]
+img[css]
+a[html]
+span[html]
+width[html]
+text-align[html]
+padding[css]
+background-color[css]
+
+8
+div[html]
+span[html]
+br[html]
+font-size[html]
+width[html]
+color[html]
+classes[css]
+class-selector[css]
+background-image[css]
+background-size[css]
+background-position[css]
+height[css]
+
+9
+a
+div
+float[css]
+clear[css]
+Колонки[css]
+padding
+width
+background-color
+color
+font-size
+margin-bottom
+text-transform
+margin-bottom
+line-height
+br
+
+10
+transition[css]
+Кнопки[css]
+border[css]
+color[css]
+text-decoration[css]
+background-color
+color
+padding
+:hover
+
+11
+Кнопки
+ul[html]
+li[html]
+a
+div
+text-transform
+margin-right
+padding
+line-height
+display
+height
+list-style-type
+margin-bottom
+width
+background-color
+
+12
+Блочная модель
+h2[html]
+font-size
+text0transfomr
+margin-bottom
+float
+line-height
+font-weight
+Class-Child Selector[css]
+
+13
+img
+border-radius
+
+17
+Навигация между страницами href
+
+
+
+==================================================================================================
+
+
+a[html]:t
+Advanced
+background-color[css]:t
+background-image[css]:t
+background-position[css]:t
+background-size[css]:t
+Beginner
+body[html]
+border[css]:t
+border-radius[css]:t
+Box model[css]:t
+br[html]
+browser[web]
+border[css]:t
+Chrome[browser]
+Chrome Development Tools[browser,development]
+color[css]:t
+Class selector[css]:t
+Class-Child Selector[css]:t
+classes[css]:t
+clear[css]:t
+css[web]:t
+div[html]:t
+display[css]:t
+encoding[browser]
+Fonts[css]:t
+font-weight[css]:t
+float[css]:t
+font-size[html]:t
+h2[html]
+head[html]
+height[css]:t
+hover[css]:t
+html[web]
+img[html]:t
+li[html]:t
+line-height[css]:t
+list-style-type[css]:t
+margin[css]:t
+margin-bottom[css]:t
+margin-right[css]:t
+Medium
+meta[html]
+padding[css]:t
+span[html]:t
+style[html]:t
+Sublime Text[Code Editor]
+tag selector[css]:t
+text-align[css]:t
+text-decoration[css]:t
+text-transform[css]:t
+title[html]
+transition[css]:t
+ul[html]:t
+utf-8[encoding]
+web
+width[css]:t
+Windows-1251[encoding]
+Блочная модель[css,html]:t
+Горизонтальное выравнивание[css]:t
+Способы задания цвета:t
+Средство определения цвета[development]
+Структура html[web]:t
+Кнопки[css]:t
+Колонки[css]:t
+Макет страницы[html,development]
+Навигация между страницами href[html]:t // отдельно или подраздел более общего: навигация
+Процесс разработки [web,development]

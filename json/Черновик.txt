@@ -1,0 +1,906 @@
+Черновик
+
+Обзор задачи:
+- Показать границы будущих блоков
+- Обеспечить горизонтальное выравнивание содержимого
+
+Тебе потребуются:
+css-стили: <code>margin</code> <code>border</code> <code>height</code>
+атрибут <code>class</code>
+
+Тебе потребуется:
+Горизонтальное выравнивание блоков
+Применение классов к элементам
+
+
+
+
+
+
+<author role="mentor">
+Принцип работы с версткой от большего к меньшему. Сначала мы займемся базовыми вещами: каркас приложения, основные блоки и их выравнивание. Далее будем углубляться в мелкие детали.
+</author>
+
+
+
+
+
+
+Нужно добавить внутрь каждого блока (header, slider и так далее) новый блок с классом content. Это подготовит верстку к выравниванию.
+<listing>
+<div class="header">
+        <div class="content">header</div>
+    </div>
+    <div class="slider">
+        <div class="content">slider</div>
+    </div>
+    <div class="module1">
+        <div class="content">module1</div>
+    </div>
+    <div class="module2">
+        <div class="content">module2</div>
+    </div>
+    <div class="module3">
+        <div class="content">module3</div>
+    </div>
+    <div class="footer">
+        <div class="content">footer</div>
+    </div>
+</listing>
+
+
+
+
+
+Класс content будет отвечать за выравнивание. Следует указать свойство <code>margin</code> таким образом, чтобы все блоки с классом content выравнивались по горизонтали.
+.content {
+            margin: 0 auto;
+        }
+</listing>
+Сделать <code>border</code>, чтобы было видно как располагаются блоки.
+.content {
+            border: solid 1px;
+        }
+</listing>
+Определи значение <code>width</code> content. Оно будет фиксированным и меняться не будет.
+<listing>
+.content {
+            width: 900px;
+        }
+</listing>
+
+
+
+
+
+
+Теперь надо поставить высоту основных блоков. Высоту надо померить с помощью макета: сколько каждый <code>div</code> занимает по высоте места. А цвета просто так можно поставить, чтобы наглядно видны были границы.
+<listing>
+.header {
+            height: 110px;
+            background-color: #fff;
+        }
+        .slider {
+            height: 400px;
+            background-color: #888686;
+        }
+        .module1 {
+            height: 400px;
+            background-color: #e3dcd3;
+        }
+        .module2 {
+            height: 600px;
+            background-color: #a2c6e3;
+        }
+        .module3 {
+            height: 350px;
+            background-color: #a69f99;
+        }
+        .footer {
+            height: 370px;
+            background-color: #1895e3;
+        }
+</listing>
+
+
+
+
+
+Должен получиться примерно вот такой результат:
+<img src="/images/taskB.png" width="200px"/>
+
+
+
+
+
+
+Обзор задачи:
+- Задай реальные цвета блоков, как указано на макете.
+
+Тебе потребуется:
+css-классы: <code>background-color</code>
+Средство определения цвета
+
+Тебе потребуется:
+- background стили
+- Средство определения цвета
+
+
+
+
+
+
+
+<author role="mentor">
+Обрати внимание, что для блока .slider тоже надо указать цвет фона, хотя там будет картинка. Цвет должен быть наиболее близок к цвету фоновой картинки.
+Фон будет виден пока грузится картинка (особенно, если она большая), либо она будет удалена с сервера.
+</author>
+
+
+
+
+
+
+Описание CSS свойства background-color вот тут
+Там есть много свойств работы с фоном, они часто используются. Со временем попробуешь большинство из них.
+
+
+
+
+
+
+Найди способ как определить цвет каждого раздела в картинке, например:
+<listing>
+http://inettools.net/ru/application/pixelcolor
+</listing>
+
+
+
+
+
+Задай цвета для каждого из блоков от header до footer. Воспользуйся известным тебе свойством background-color.
+<listing>
+.header {
+            height: 110px;
+            background-color: #fff;
+        }
+        .slider {
+            height: 400px;
+            background-color: #fff;
+        }
+        .module1 {
+            height: 400px;
+            background-color: #046cc1;
+        }
+        .module2 {
+            height: 600px;
+            background-color: #f4f4f4;
+        }
+        .module3 {
+            height: 350px;
+            background-color: #046cc1;
+        }
+        .footer {
+            height: 370px;
+            background-color: #000;
+        }
+</listing>
+
+
+
+
+
+
+Обзор задачи:
+- Скачать логотип и добавить его в проект
+- Добавить логотип в html документ, обернув его тегом <code><a></code>
+- Добавить текстовые метки в контейнер <code><div></code> и выровнять
+- Выставить отступы для header
+
+Тебе потребуются:
+- css-стили: padding, [css]display, [css]text-align, width
+- html теги: [html]a, [html]img, [img]span
+
+Тебе потребуется:
+- CSS блочная модель
+- CSS display
+- HTML горизонтальное выравнивание inline элементов
+
+Логотип:
+<a href="/images/logo.png">Скачать</a>
+
+
+
+
+
+
+Добавь в header логотип <code><img></code>, сделав из него ссылку <code><a></code>.
+Помни, что все элементы должны находиться внутри content для выравнивания.
+<listing>
+<div class="header">
+        <div class="content">
+            <a href="#">
+                <img src="i/logo.png"/>
+            </a>
+        </div>
+    </div>
+</listing>
+
+
+
+
+
+
+
+
+Далее добавим блок с двумя текстовыми элементами: телефоном и городом.
+<listing>
+<div class="header">
+        <div class="content">
+            <a href="#">
+                <img src="i/logo.png"/>
+            </a>
+            <div class="nav_container">
+                <span class="nav_link">8-800-2000-50</span>
+                <span class="nav_link">г. Москва</span>
+            </div>
+        </div>
+    </div>
+</listing>
+Пока выглядит не очень и пора заняться стилями.
+
+
+
+
+
+
+
+Надо расположить nav_container в одну строку с логотипом.
+<listing>
+.nav_container {
+            display: inline-block;
+        }
+</listing>
+
+
+
+
+
+
+
+Выровняй этот текст по правому краю. Предлагаю увеличить ширину nav_container и сделать text-align.
+<listing>
+.nav_container {
+            display: inline-block;
+            width: 700px;
+            text-align: right;
+        }
+</listing>
+
+
+
+
+
+
+
+Надо добавить отступы между строками
+<listing>
+        .nav_link {
+            padding: 10px;
+        }
+</listing>
+
+
+
+
+Добавить отступы <code>padding</code> для класса header. Это позволит расположить лого в нужном положении, по середине блока-заголовка.
+Кстати, <code>height</code> больше не нужен в классе header. Высота теперь определяется картинкой и отступами.
+<listing>
+.header {
+            /*height: 110px; Удаляем, так как теперь высота формируется на основе лого и паддингов */
+            background-color: #fff;
+            padding: 27px 0 27px;
+        }
+</listing>
+
+
+
+
+
+
+Обзор задачи:
+- Скачать фон и установить для блока
+- Установить текст и задать ему стили
+
+Тебе потребуется:
+- br, div, span
+- css-стили: padding, font-size, width, color, background-image, background-size, background-position
+
+Тебе потребуется:
+- CSS background
+- CSS стили шрифта
+
+Ресурсы:
+<a href="/images/slide1.jpg">Фон</a>
+
+
+
+
+Добавим текст в блоке slider. Предложу добавить <code>div</code>, а внутри него <code>span</code>. Даже два <code><span></code> ведь там два разных стиля.
+<listing>
+    <div class="slider">
+        <div class="content">
+            <div class="slider_text">
+                <span>Восстановление любых</span></br><span class="slider_text blue">цифровых устройств</span>
+            </div>
+        </div>
+    </div>
+</listing>
+
+
+
+
+
+Используй <code>padding</code> <code>font-size</code> <code>width</code> <code>color</code> для настройки внешнего вида текста. Логично, что для синего <code>span</code> надо использовать отдельный класс:
+<listing>
+.slider_text {
+            padding: 40px 0 0 0;
+            font-size: 70px;
+            width: 200px;
+        }
+        .blue {
+            color: #046cc1;
+        }
+</listing>
+
+
+
+
+
+
+Настроим фон для блока слайдера. Проверь, как поведет себя фон при изменении размеров окна браузера.
+<listing>
+.slider {
+            height: 400px;
+            background-image: url(i/slide1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+</listing>
+
+
+
+
+
+Обзор задачи:
+-Организовать колонки
+-Выровнять их и подобрать ширину
+
+Тебе потребуется:
+- html-теги: a, div,
+- css-стили: float, clear
+padding, width, background-color,  color, font-size, margin-bottom, text-transform, margin-bottom, line-height
+
+Тебе потребуется:
+CSS Свойства float
+CSS background
+CSS блочная модель
+
+
+
+
+
+Предлагаю колонки делать с помощью <code><div></code> с использованием CSS свойства <code>float: left;</code>
+Добавь три колонки в module1, не забудь про элемент clear, чтобы сделать переход на новую строку.
+<listing>
+<div class="module1">
+<div class="content">
+            <div class="column">
+                
+            </div>
+            <div class="column">
+                
+            </div>
+            <div class="column">
+                
+            </div>
+            <div class="clear"></div>
+</div>
+</div>
+</listing>
+
+
+
+
+
+Далее как видно из макета в каждой колонке есть три элемента: заголовок, текст, кнопка. Давай добавим их.
+<listing>
+<div class="column_h_cnt">Computer</br>Repare</div>
+                <div class="column_text_cnt white">Lorem ipsum dolor sit amet conse ctetur adipisicing elit Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</div>
+                <div class="btn_cnt">
+                    <a href="http://google.com" title="Read more" class="btn" target="_self">Подробнее</a>
+</div>
+</listing>
+
+
+
+
+
+
+Организуем колоночную верстку. Настрой CSS-классы column и clear. 
+<listing>
+.column {
+            float: left;
+            padding: 40px 15px 40px 0;
+            width: 400px;
+        }
+.clear {
+            clear: both;
+        }
+</listing>
+
+
+
+
+
+
+Как видно, сейчас ширина колонки слишком большая и она не умещается по ширине.
+Подберите ширину так, чтобы колонки соответствовали макету и умещались по ширине:
+<listing>
+.column {
+            float: left;
+            padding: 40px 15px 40px 0;
+            width: 282px;
+        }
+</listing>
+
+
+
+
+
+
+
+Стилизуем тексты, у нас их два. Кнопки пока не трогаем.
+<listing>
+.column_h_cnt {
+            background-color: #000;
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .column_text_cnt {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+        .white {
+            color: #fff;
+        }
+</listing>
+
+
+
+
+
+Описание задачи:
+-Сверстать кнопки в соответствии с дизайном
+-Установить стиль при наведении
+-Плавность изменения свойств
+
+Тебе потребуются:
+HTML Кнопки
+CSS transitions
+
+
+
+
+Речь идет о вот этой кнопке <code><a></code> которые ты уже сделал
+<listing>
+                <div class="btn_cnt">
+                    <a href="http://google.com" title="Read more" class="btn" target="_self">Подробнее</a>
+                </div>
+</listing>
+
+
+
+Задай стиль кнопок в соответствии с дизайном на макете.
+<listing>
+.btn {
+            color: #fff;
+            padding: 14px 27px;
+            border: 2px solid #fff;
+            text-decoration: none;
+        }
+</listing>
+
+
+
+
+<author role="mentor">
+Надо задать стиль при наведении. Наверное, у тебя возник закономерный вопрос: А какой стиль? Он же нигде не показан.
+Уточнил у дизайнера: цвет фона белый, цвет текста - такой же как и цвет фона всего блока.
+</author>
+Создадим псевдокласс <code>hover</code>, который будет активироваться при наведении
+<listing>
+.btn:hover {
+            background-color: #fff;
+            color: #046cc1;
+        }
+</listing>
+
+
+
+
+В завершении установить плавность установки свойств стилем <code>transition</code>:
+<listing>
+.btn {
+            color: #fff;
+            padding: 14px 27px;
+            border: 2px solid #fff;
+            text-decoration: none;
+            transition: all 0.5s ease;
+        }
+</listing>
+Это будет означать, что все свойства класса btn будут плавно изменяться за полсекунды.
+
+
+
+
+Описание задачи:
+-Подготовить колонки
+-Сделать список в первой колонке
+-Наполнить его фейковым контентом
+-Стилизовать
+
+Тебе потребуется:
+- HTML Списки
+- HTML Колонки
+- CSS Сложные селекторы
+
+
+
+
+Добавь две колонки. Ты уже умеешь это.
+<listing>
+<div class="module2">
+        <div class="content">
+            <div class="column_block3_1">
+                
+            </div>
+            <div class="column_block3_2">
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</listing>
+
+
+
+
+Опишем классы для колонок. Ширина на основе макета. Но чтобы умещалась.
+<listing>
+.column_block3_1 {
+            width: 370px;
+            float: left;
+        }
+        .column_block3_2 {
+            width: 530px;
+            float: left;
+        }
+</listing>
+Класс clear уже описан, переиспользуем.
+
+
+
+
+Внутрь первой колонки добавь список <code><ul></code>. Элементами списка могут выступать любые теги. В данном случае <code><a></code>
+<listing>
+<div class="content">
+            <div class="column_block3_1">
+                <ul class="services_list">
+                    <li><a href="./about">Same Day In-Home Support</a></li>
+                    <li><a href="./portfolio">Certified Technicians</a></li>
+                    <li><a href="./news">Virus &amp; Spyware Removal</a></li>
+                    <li><a href="./about">Wireless Networking</a></li>
+                    <li><a href="./portfolio">On-site Engineers</a></li>
+                    <li><a href="./news">AD, MS Exchange, SQL</a></li>
+                    <li><a href="./about">Microsoft Certified</a></li>
+                    <li><a href="./portfolio">Maintenance Contracts</a></li>
+                    <li><a href="./news">Nationwide IT Workforce</a></li>
+                    <li><a href="./about">OEM Hardware Installations</a></li>
+                </ul>
+            </div>
+            <div class="column_block3_2">
+
+            </div>
+            <div class="clear"></div>
+        </div>
+</listing>
+
+
+
+
+Далее надо настроить стили списка и его элементов.
+<listing>
+.services_list {
+            text-transform: uppercase;
+            margin-right: 19px;
+            padding: 0;
+        }
+        .services_list li {
+            line-height: 19px;
+            display: list-item;
+            height: 51px;
+            list-style-type: none;
+            margin-bottom: 3px;
+            width: 351px;
+            background-color: #000;
+        }
+</listing>
+
+
+
+
+Добавить стили для кнопки <code><a></code> с применением селекторов типа родитель-потомок. То есть без присвоения <code><a></code> отдельного класса.
+И про стиль при наведении не забудь. Цвет фона при наведении: #046cc1
+<listing>
+.services_list a {
+            color: #fff;
+            font-size: 18px;
+            display: block;
+            padding: 14px 20px 18px;
+            position: relative;
+        }
+        .services_list a:hover {
+            background-color: #046cc1;
+        }
+</listing>
+
+
+
+
+
+Описание задачи
+-Колонки со списками
+-Стилизовать заголовки
+-Использовать иконки
+-Настроить отступы и внешний вид
+
+Тебе потребуются:
+Блочная модель
+CSS селекторы
+
+Ресурсы:
+<a href="/images/icons.zip">Иконки</a>
+
+
+
+
+Давай сделаем заготовку. В колонке column_block3_2 создай заголовок <code>h2</code> и две колонки. В каждой колонке список <code><ul></code>
+В каждом списке поставь столько <code>li</code> сколько надо по дизайну
+<listing>
+<div class="column_block3_2">
+                <h2>Our Services</h2>
+                <div class="customer_column">
+                    <ul class="customer_list">
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="customer_column">
+                    <ul class="customer_list">
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+</listing>
+
+
+
+
+
+Задай стили заголовку <code>h2</code> по дизайну.
+<listing>
+h2 {
+            font-size: 36px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+</listing>
+
+
+
+
+
+Колонки и список стилизуем. Для списка только отступы надо поставить.
+<listing>
+.customer_list {
+            margin-right: 19px;
+            padding: 0;
+        }
+        .customer_column {
+            float: left;
+            width: 260px;
+        }
+</listing>
+
+
+
+
+
+Самое время сделать элемент списка. Я бы собрал элемент списка из таких тегов: <code>img</code>, <code>span</code>, <code>br</code>
+<listing>
+<li>
+                            <img class="customer_icon" src="i/data7.png"/>
+                            <span class="customers_h">LOREM IPSUM DOLOR SIT</span>
+                            </br>
+                            Sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </li>
+</listing>
+Расставь шесть иконок в соответствии с дизайном.
+
+
+
+
+
+
+Иконки большие. Уменьши их.
+<listing>
+.customer_icon {
+            width: 30px;
+        }
+</listing>
+
+
+
+
+
+
+Ну и текстом займемся. Я бы создал общее правило для всего текста типа ".customer_list li" и отдельно для заголовка .customers_h
+<listing>
+.customer_list li {
+            list-style-type: none;
+            font-size: 14px;
+            color: gray;
+            line-height: 1.7em;
+            padding-bottom: 20px;
+        }
+.customers_h {
+            text-transform: uppercase;
+            font-size: 19px;
+            color: #046cc1;
+            font-weight: bold;
+        }
+</listing>
+
+
+
+
+Описание задачи:
+- Трех-колоночная структура
+- Разработать блок с аватаркой и текстом
+- Финальный вид и настройка
+
+Тебе потребуется:
+- колонки
+- отступы и прочее
+- border-radius
+
+
+
+
+Создай заготовку для блока рекомендаций. С уже привычными для тебя колонками. Ну и заголовок <code>h2</code> добавь.
+<listing>
+<div class="module3">
+        <div class="content white">
+            <h2 class="white">Our testimonials</h2>
+            <div class="testim_col">
+                
+            </div>
+            <div class="testim_col">
+                
+            </div>
+            <div class="testim_col">
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</listing>
+
+
+
+
+
+
+
+Внутри колонки сформируем заготовку для аватарки <code><img></code>. Картинку надо поместить в <code>div</code>, чтобы настроить обтекание текста.
+<listing>
+<div class="testim_col">
+                <div class="user_avatar_cnt">
+                    <img class="user_avatar" src="i/user1.png"/>
+                </div>
+                Conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+</div>
+</listing>
+
+
+
+
+
+
+
+Все html-элементы добавлены. Теперь стили.
+Задай отступы и ширину так, чтобы получилось по дизайну. Также размер шрифта и высоту линии.
+<listing>
+.testim_col {
+            width: 290px;
+            float: left;
+            margin: 15px 10px 0 0;
+            font-size: 14px;
+            line-height: 1.7em;
+        }
+</listing>
+
+
+
+
+
+
+Текст должен обтекать картинку слева. И с отступом.
+<listing>
+.user_avatar_cnt {
+            float: left;
+            padding: 10px;
+        }
+</listing>
+
+
+
+
+
+
+Круглые аватарки заданного размера. Круг получается путем задания свойства <code>border-radius</code> заведомо большего размера чем ширина. Попробуй.
+<listing>
+.user_avatar {
+            border-radius: 200px;
+            width: 120px;
+        }
+</listing>
+
+
+
+
+
+
+В конце подкорректируем отступы у блока module3.
+<listing>
+.module3 {
+            /*height: 350px;*/
+            background-color: #046cc1;
+            padding: 20px 0 50px 0;
+        }
+</listing>
+Принудительную установку height теперь можно убрать, так как она формируется за счет контента внутри блока.
+
+
+
+
